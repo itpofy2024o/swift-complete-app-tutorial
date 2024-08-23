@@ -9,7 +9,6 @@ import SwiftUI
 
 struct SplashTextFieldView: View {
     @Environment(\.colorScheme) var colorScheme
-    @State private var hasSeenSplash = UserDefaults.standard.bool(forKey: "hasSeenSplash")
     @State private var isNavigating = false
     let pageIndex: Int
     let title: String
@@ -21,32 +20,30 @@ struct SplashTextFieldView: View {
                 .fontWeight(.semibold)
                 .foregroundColor(.black)
             if pageIndex == 2 {
-                NavigationLink(
-                    value: "auth", 
-                    label: {
-                        Text("Sign In Now")
-                            .font(.title)
-                            .fontWeight(.semibold)
-                            .padding()
-                            .background(
-                                self.isNavigating ? Color(
-                                    red: 219.0 / 255.0,
-                                    green: 26.0 / 255.0,
-                                    blue: 39.0 / 255.0
-                                ).opacity(0.98) : Color(
-                                    red: 219.0 / 255.0,
-                                    green: 26.0 / 255.0,
-                                    blue: 39.0 / 255.0
-                                ).opacity(0.88)
-                            )
-                            .foregroundColor(.white)
-                            .cornerRadius(8)
-                    }
-                )
+                NavigationLink {
+                    AuthView().navigationBarBackButtonHidden(true)
+                } label: {
+                    Text("Sign In Now")
+                        .font(.title)
+                        .fontWeight(.semibold)
+                        .padding()
+                        .background(
+                            self.isNavigating ? Color(
+                                red: 219.0 / 255.0,
+                                green: 26.0 / 255.0,
+                                blue: 39.0 / 255.0
+                            ).opacity(0.98) : Color(
+                                red: 219.0 / 255.0,
+                                green: 26.0 / 255.0,
+                                blue: 39.0 / 255.0
+                            ).opacity(0.88)
+                        )
+                        .foregroundColor(.white)
+                        .cornerRadius(8)
+                }
                 .onTapGesture {
                     self.isNavigating = true // Trigger navigation
                 }
-
             } else {
                 Text("\(content)")
                     .font(.headline)
@@ -65,11 +62,7 @@ struct SplashTextFieldView: View {
             width:UIScreen.main.bounds.width,
             height:UIScreen.main.bounds.height*0.3
         ).alignmentGuide(.top) { d in d[.top] }
-        .navigationDestination(for: String.self) { value in
-                    if value == "auth" {
-                        AuthView().navigationBarBackButtonHidden(true)
-                    }
-                }
+        .animation(.easeInOut,value:true)
     }
 }
 

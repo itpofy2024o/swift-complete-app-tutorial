@@ -92,7 +92,6 @@ struct SplashView: View {
                     .offset(x: -CGFloat(self.currentPage) * geometry.size.width + self.dragOffset.width)
                     .animation(.easeInOut, value: self.currentPage)
                     
-                    // Page control
                     PageControl(numberOfPages: pageCount, currentPage: self.$currentPage)
                         .position(x: geometry.size.width / 2, y: geometry.size.height - 30)
                 }
@@ -104,10 +103,8 @@ struct SplashView: View {
                         .onEnded { value in
                             let threshold: CGFloat = 50
                             if value.translation.width < -threshold {
-                                // Swipe left
                                 self.currentPage = min(self.currentPage + 1, pageCount - 1)
                             } else if value.translation.width > threshold {
-                                // Swipe right
                                 self.currentPage = max(self.currentPage - 1, 0)
                             }
                         }
