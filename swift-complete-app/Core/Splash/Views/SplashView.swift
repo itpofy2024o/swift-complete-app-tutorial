@@ -37,7 +37,7 @@ struct AboutView: View {
     }
 }
 
-struct LoginSignupView: View {
+struct AuthPromptView: View {
     var body: some View {
         ZStack {
             SplashBaseImageView()
@@ -52,59 +52,58 @@ struct LoginSignupView: View {
     }
 }
 
+struct PageControl: View {
+    var numberOfPages: Int
+    @Binding var currentPage: Int
+
+    var body: some View {
+        HStack(spacing: 8) {
+            ForEach(0..<numberOfPages, id:\.self) { index in
+                Circle()
+                    .fill(self.currentPage == index ? Color.black : Color.gray)
+                    .frame(width: 8, height: 8)
+            }
+        }
+        .padding(.top, UIScreen.main.bounds.height*0.1)
+    }
+}
+
 struct SplashView: View {
-    @State private var currentIndex: Int = 0
-    @State private var dragOffset: CGFloat = 0
-    private let views:[AnyView] = [
+    @State private var currentPage: Int = 0
+    @GestureState private var dragOffset = CGSize.zero
+
+    let pages: [AnyView] = [
         AnyView(IntroView()),
         AnyView(AboutView()),
-        AnyView(LoginSignupView())
+        AnyView(AuthPromptView())
     ]
     
     var body: some View {
-            VStack {
-                ZStack {
-                    GeometryReader { geometry in
-                        HStack(spacing: 0) {
-                            ForEach(0..<views.count, id: \.self) { index in
-                                views[index]
-                                    .frame(width: geometry.size.width)
-                            }
-                        }
-                        .offset(
-                            x: -CGFloat(currentIndex) * geometry.size.width + dragOffset
-                        )
-                        .animation(.easeInOut, value: currentIndex)
-                        .gesture(
-                            DragGesture()
-                                .onChanged { value in
-                                    let dragThreshold: CGFloat = 50
-                                    if value.translation.width < -dragThreshold {
-                                        nextPage()
-                                    } else if value.translation.width > dragThreshold {
-                                        previousPage()
-                                    }
-                                }
-                        )
+        GeometryReader { geometry in
+            ZStack {
+                self.pages[self.currentPage]
+                    .offset(x: self.dragOffset.width)
+                    .animation(.easeInOut, value: self.dragOffset)
+
+                PageControl(numberOfPages: self.pages.count, currentPage: self.$currentPage)
+                    .position(x: geometry.size.width / 2, y: geometry.size.height - 30)
+            }
+            .gesture(
+                DragGesture()
+                    .updating(self.$dragOffset) { value, state, _ in
+                        state = value.translation
                     }
-                }
-                
-                PageIndicator(numberOfPages: views.count, currentPage: currentIndex)
-                    .padding(.bottom)
-            }
+                    .onEnded { value in
+                        let threshold: CGFloat = 50
+                        if value.translation.width < -threshold {
+                            self.currentPage = min(self.currentPage + 1, self.pages.count - 1)
+                        } else if value.translation.width > threshold {
+                            self.currentPage = max(self.currentPage - 1, 0)
+                        }
+                    }
+            )
         }
-        
-        private func nextPage() {
-            if currentIndex < views.count - 1 {
-                currentIndex += 1
-            }
-        }
-        
-        private func previousPage() {
-            if currentIndex > 0 {
-                currentIndex -= 1
-            }
-        }
+    }
 }
 
 struct PageIndicator: View {
