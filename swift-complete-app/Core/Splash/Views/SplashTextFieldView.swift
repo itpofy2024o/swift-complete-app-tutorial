@@ -16,15 +16,19 @@ struct SplashTextFieldView: View {
             Text("\(title)")
                 .font(.largeTitle)
                 .fontWeight(.semibold)
+                .foregroundColor(.black)
             Text("\(content)")
                 .font(.headline)
                 .fontWeight(.medium)
                 .lineLimit(3)
                 .multilineTextAlignment(.center)
-                .padding(.top,5)
+                .padding(EdgeInsets(top: 10, leading: 40, bottom: 0, trailing: 40))
+                .foregroundColor(
+                    colorScheme == .dark ? .secondary : .secondary
+                )
         }
         .padding(
-            EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0)
+            EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 0)
         ).frame(height:UIScreen.main.bounds.height*0.2)
     }
 }
