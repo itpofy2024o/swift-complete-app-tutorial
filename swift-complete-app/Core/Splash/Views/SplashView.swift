@@ -9,36 +9,45 @@ import SwiftUI
 
 struct IntroView: View {
     var body: some View {
-        VStack {
-            Text("Welcome to the App")
-                .font(.largeTitle)
-                .padding()
-            Text("This is the introduction page.")
-                .font(.subheadline)
+        ZStack {
+            SplashBaseImageView()
+            VStack {
+                Spacer()
+                SplashTextFieldView(
+                    title:"This is Rudimentary!",
+                    content:"It is a fabulous journey that we have been through, le's keep it up and start rolling!"
+                ).background(.white)
+            }
         }
     }
 }
 
 struct AboutView: View {
     var body: some View {
-        VStack {
-            Text("About Us")
-                .font(.largeTitle)
-                .padding()
-            Text("Here is some information about the app.")
-                .font(.subheadline)
+        ZStack {
+            SplashBaseImageView()
+            VStack {
+                Spacer()
+                SplashTextFieldView(
+                    title:"This is Rudimentary!",
+                    content:"It is a fabulous journey that we have been through, le's keep it up and start rolling!"
+                ).background(.white)
+            }
         }
     }
 }
 
 struct LoginSignupView: View {
     var body: some View {
-        VStack {
-            Text("Get Started")
-                .font(.largeTitle)
-                .padding()
-            Text("Please log in or sign up to continue.")
-                .font(.subheadline)
+        ZStack {
+            SplashBaseImageView()
+            VStack {
+                Spacer()
+                SplashTextFieldView(
+                    title:"This is Rudimentary!",
+                    content:"It is a fabulous journey that we have been through, le's keep it up and start rolling!"
+                ).background(.white)
+            }
         }
     }
 }
@@ -51,10 +60,20 @@ struct SplashView: View {
     ]
     
     @State private var currentPage = 0
-    @State private var offset: CGFloat = 0
     
     var body: some View {
-        Text("")
+        ZStack {
+            TabView(selection: $currentPage) {
+                IntroView()
+                    .tag(0)
+                
+                AboutView()
+                    .tag(1)
+                
+                LoginSignupView()
+                    .tag(2)
+            }
+        }
     }
 }
 
