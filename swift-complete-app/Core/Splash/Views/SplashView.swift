@@ -10,7 +10,7 @@ import SwiftUI
 struct IntroView: View {
     var body: some View {
         ZStack {
-            SplashBaseImageView(image:"infographic") // how to determine if image is provided
+            SplashBaseImageView(image:"infographic")
             VStack {
                 Spacer()
                 SplashTextFieldView(pageIndex: 0,
@@ -81,36 +81,38 @@ struct SplashView: View {
     ]
     
     var body: some View {
-        GeometryReader { geometry in
-            ZStack {
-                HStack(spacing: 0) {
-                    ForEach(0..<pageCount, id: \.self) { index in
-                        pages[index]
-                    }
-                }
-                .offset(x: -CGFloat(self.currentPage) * geometry.size.width + self.dragOffset.width)
-                .animation(.easeInOut, value: self.currentPage)
-                
-                // Page control
-                PageControl(numberOfPages: pageCount, currentPage: self.$currentPage)
-                    .position(x: geometry.size.width / 2, y: geometry.size.height - 30)
-            }
-            .gesture(
-                DragGesture()
-                    .updating(self.$dragOffset) { value, state, _ in
-                        state = value.translation
-                    }
-                    .onEnded { value in
-                        let threshold: CGFloat = 50
-                        if value.translation.width < -threshold {
-                            // Swipe left
-                            self.currentPage = min(self.currentPage + 1, pageCount - 1)
-                        } else if value.translation.width > threshold {
-                            // Swipe right
-                            self.currentPage = max(self.currentPage - 1, 0)
+        NavigationStack {
+            GeometryReader { geometry in
+                ZStack {
+                    HStack(spacing: 0) {
+                        ForEach(0..<pageCount, id: \.self) { index in
+                            pages[index]
                         }
                     }
-            )
+                    .offset(x: -CGFloat(self.currentPage) * geometry.size.width + self.dragOffset.width)
+                    .animation(.easeInOut, value: self.currentPage)
+                    
+                    // Page control
+                    PageControl(numberOfPages: pageCount, currentPage: self.$currentPage)
+                        .position(x: geometry.size.width / 2, y: geometry.size.height - 30)
+                }
+                .gesture(
+                    DragGesture()
+                        .updating(self.$dragOffset) { value, state, _ in
+                            state = value.translation
+                        }
+                        .onEnded { value in
+                            let threshold: CGFloat = 50
+                            if value.translation.width < -threshold {
+                                // Swipe left
+                                self.currentPage = min(self.currentPage + 1, pageCount - 1)
+                            } else if value.translation.width > threshold {
+                                // Swipe right
+                                self.currentPage = max(self.currentPage - 1, 0)
+                            }
+                        }
+                )
+            }
         }
     }
 }
