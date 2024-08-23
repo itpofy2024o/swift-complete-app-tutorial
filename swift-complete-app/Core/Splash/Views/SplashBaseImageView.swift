@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct SplashBaseImageView: View {
-    @State private var isImageAvailable = false
+    let image: String
     var body: some View {
-        if isImageAvailable == true {
-            Image("infographic").resizable().scaledToFit()
+        if image.count > 0 {
+            Image(image).resizable().scaledToFit()
         } else {
             Color(
                 red:150.0/255.0,
@@ -23,5 +23,5 @@ struct SplashBaseImageView: View {
 }
 
 #Preview {
-    SplashBaseImageView()
+    SplashBaseImageView(image:"infographic")
 }

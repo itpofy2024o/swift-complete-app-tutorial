@@ -10,7 +10,7 @@ import SwiftUI
 struct IntroView: View {
     var body: some View {
         ZStack {
-            SplashBaseImageView()
+            SplashBaseImageView(image:"infographic") // how to determine if image is provided
             VStack {
                 Spacer()
                 SplashTextFieldView(pageIndex: 0,
@@ -25,7 +25,7 @@ struct IntroView: View {
 struct AboutView: View {
     var body: some View {
         ZStack {
-            SplashBaseImageView()
+            SplashBaseImageView(image:"a")
             VStack {
                 Spacer()
                 SplashTextFieldView(pageIndex: 1,
@@ -40,12 +40,12 @@ struct AboutView: View {
 struct AuthPromptView: View {
     var body: some View {
         ZStack {
-            SplashBaseImageView()
+            SplashBaseImageView(image:"b")
             VStack {
                 Spacer()
                 SplashTextFieldView(pageIndex: 2,
                     title:"This is Amazing!",
-                    content:"It is a fabulous journey that we have been through, le's keep it up and start rolling!"
+                    content:""
                 ).background(.white)
             }
         }
@@ -71,6 +71,8 @@ struct PageControl: View {
 struct SplashView: View {
     @State private var currentPage: Int = 0
     @GestureState private var dragOffset = CGSize.zero
+    
+    private let pageCount = 3
 
     let pages: [AnyView] = [
         AnyView(IntroView()),
@@ -81,11 +83,16 @@ struct SplashView: View {
     var body: some View {
         GeometryReader { geometry in
             ZStack {
-                self.pages[self.currentPage]
-                    .offset(x: self.dragOffset.width)
-                    .animation(.easeInOut, value: self.dragOffset)
-
-                PageControl(numberOfPages: self.pages.count, currentPage: self.$currentPage)
+                HStack(spacing: 0) {
+                    ForEach(0..<pageCount, id: \.self) { index in
+                        pages[index]
+                    }
+                }
+                .offset(x: -CGFloat(self.currentPage) * geometry.size.width + self.dragOffset.width)
+                .animation(.easeInOut, value: self.currentPage)
+                
+                // Page control
+                PageControl(numberOfPages: pageCount, currentPage: self.$currentPage)
                     .position(x: geometry.size.width / 2, y: geometry.size.height - 30)
             }
             .gesture(
@@ -96,8 +103,10 @@ struct SplashView: View {
                     .onEnded { value in
                         let threshold: CGFloat = 50
                         if value.translation.width < -threshold {
-                            self.currentPage = min(self.currentPage + 1, self.pages.count - 1)
+                            // Swipe left
+                            self.currentPage = min(self.currentPage + 1, pageCount - 1)
                         } else if value.translation.width > threshold {
+                            // Swipe right
                             self.currentPage = max(self.currentPage - 1, 0)
                         }
                     }
