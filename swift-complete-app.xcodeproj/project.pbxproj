@@ -14,6 +14,15 @@
 		9EAD8DCF2C78A1A900CA256C /* swift_complete_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAD8DCE2C78A1A900CA256C /* swift_complete_appTests.swift */; };
 		9EAD8DD92C78A1A900CA256C /* swift_complete_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAD8DD82C78A1A900CA256C /* swift_complete_appUITests.swift */; };
 		9EAD8DDB2C78A1A900CA256C /* swift_complete_appUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAD8DDA2C78A1A900CA256C /* swift_complete_appUITestsLaunchTests.swift */; };
+		9EAD8DE92C78A49600CA256C /* WalletConnect in Frameworks */ = {isa = PBXBuildFile; productRef = 9EAD8DE82C78A49600CA256C /* WalletConnect */; };
+		9EAD8DEB2C78A49600CA256C /* WalletConnectAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 9EAD8DEA2C78A49600CA256C /* WalletConnectAuth */; };
+		9EAD8DED2C78A49600CA256C /* WalletConnectChat in Frameworks */ = {isa = PBXBuildFile; productRef = 9EAD8DEC2C78A49600CA256C /* WalletConnectChat */; };
+		9EAD8DEF2C78A49600CA256C /* WalletConnectEcho in Frameworks */ = {isa = PBXBuildFile; productRef = 9EAD8DEE2C78A49600CA256C /* WalletConnectEcho */; };
+		9EAD8DF12C78A49600CA256C /* WalletConnectNetworking in Frameworks */ = {isa = PBXBuildFile; productRef = 9EAD8DF02C78A49600CA256C /* WalletConnectNetworking */; };
+		9EAD8DF82C78A7D100CA256C /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAD8DF72C78A7D100CA256C /* SplashView.swift */; };
+		9EAD8DFB2C78ABED00CA256C /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 9EAD8DFA2C78ABED00CA256C /* Kingfisher */; };
+		9EAD8E0A2C78B4DA00CA256C /* AppTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAD8E092C78B4D900CA256C /* AppTabBarView.swift */; };
+		9EAD8E0F2C78B8E000CA256C /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAD8E0E2C78B8E000CA256C /* CardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +53,9 @@
 		9EAD8DD42C78A1A900CA256C /* swift-complete-appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "swift-complete-appUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EAD8DD82C78A1A900CA256C /* swift_complete_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swift_complete_appUITests.swift; sourceTree = "<group>"; };
 		9EAD8DDA2C78A1A900CA256C /* swift_complete_appUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swift_complete_appUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9EAD8DF72C78A7D100CA256C /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		9EAD8E092C78B4D900CA256C /* AppTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabBarView.swift; sourceTree = "<group>"; };
+		9EAD8E0E2C78B8E000CA256C /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +63,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EAD8DFB2C78ABED00CA256C /* Kingfisher in Frameworks */,
+				9EAD8DEB2C78A49600CA256C /* WalletConnectAuth in Frameworks */,
+				9EAD8DE92C78A49600CA256C /* WalletConnect in Frameworks */,
+				9EAD8DED2C78A49600CA256C /* WalletConnectChat in Frameworks */,
+				9EAD8DEF2C78A49600CA256C /* WalletConnectEcho in Frameworks */,
+				9EAD8DF12C78A49600CA256C /* WalletConnectNetworking in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,7 +112,11 @@
 		9EAD8DBC2C78A1A300CA256C /* swift-complete-app */ = {
 			isa = PBXGroup;
 			children = (
-				9EAD8DBD2C78A1A300CA256C /* swift_complete_appApp.swift */,
+				9EAD8DFE2C78B25200CA256C /* Utils */,
+				9EAD8DFD2C78B24400CA256C /* Extensions */,
+				9EAD8DFC2C78B23900CA256C /* Shared */,
+				9EAD8DF42C78A7B100CA256C /* Core */,
+				9EAD8DF22C78A79E00CA256C /* App */,
 				9EAD8DBF2C78A1A300CA256C /* ContentView.swift */,
 				9EAD8DC12C78A1A800CA256C /* Assets.xcassets */,
 				9EAD8DC32C78A1A800CA256C /* Preview Content */,
@@ -127,6 +149,141 @@
 			path = "swift-complete-appUITests";
 			sourceTree = "<group>";
 		};
+		9EAD8DF22C78A79E00CA256C /* App */ = {
+			isa = PBXGroup;
+			children = (
+				9EAD8DBD2C78A1A300CA256C /* swift_complete_appApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		9EAD8DF42C78A7B100CA256C /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				9EAD8E0B2C78B8BF00CA256C /* Card */,
+				9EAD8E072C78B34D00CA256C /* Search */,
+				9EAD8E032C78B31100CA256C /* Home */,
+				9EAD8E012C78B30500CA256C /* TabBar */,
+				9EAD8DFF2C78B2F700CA256C /* Profile */,
+				9EAD8DF52C78A7B800CA256C /* Splash */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		9EAD8DF52C78A7B800CA256C /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				9EAD8DF62C78A7BF00CA256C /* Views */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		9EAD8DF62C78A7BF00CA256C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9EAD8DF72C78A7D100CA256C /* SplashView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9EAD8DFC2C78B23900CA256C /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		9EAD8DFD2C78B24400CA256C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9EAD8DFE2C78B25200CA256C /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		9EAD8DFF2C78B2F700CA256C /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				9EAD8E002C78B30100CA256C /* Views */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		9EAD8E002C78B30100CA256C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9EAD8E012C78B30500CA256C /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				9EAD8E022C78B30E00CA256C /* Views */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		9EAD8E022C78B30E00CA256C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9EAD8E092C78B4D900CA256C /* AppTabBarView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9EAD8E032C78B31100CA256C /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				9EAD8E042C78B32E00CA256C /* Views */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		9EAD8E042C78B32E00CA256C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9EAD8E072C78B34D00CA256C /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				9EAD8E082C78B35100CA256C /* Views */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		9EAD8E082C78B35100CA256C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9EAD8E0B2C78B8BF00CA256C /* Card */ = {
+			isa = PBXGroup;
+			children = (
+				9EAD8E0C2C78B8CB00CA256C /* Views */,
+			);
+			path = Card;
+			sourceTree = "<group>";
+		};
+		9EAD8E0C2C78B8CB00CA256C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9EAD8E0E2C78B8E000CA256C /* CardView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +300,14 @@
 			dependencies = (
 			);
 			name = "swift-complete-app";
+			packageProductDependencies = (
+				9EAD8DE82C78A49600CA256C /* WalletConnect */,
+				9EAD8DEA2C78A49600CA256C /* WalletConnectAuth */,
+				9EAD8DEC2C78A49600CA256C /* WalletConnectChat */,
+				9EAD8DEE2C78A49600CA256C /* WalletConnectEcho */,
+				9EAD8DF02C78A49600CA256C /* WalletConnectNetworking */,
+				9EAD8DFA2C78ABED00CA256C /* Kingfisher */,
+			);
 			productName = "swift-complete-app";
 			productReference = 9EAD8DBA2C78A1A300CA256C /* swift-complete-app.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +380,10 @@
 				Base,
 			);
 			mainGroup = 9EAD8DB12C78A1A300CA256C;
+			packageReferences = (
+				9EAD8DE72C78A49600CA256C /* XCRemoteSwiftPackageReference "WalletConnectSwiftV2" */,
+				9EAD8DF92C78ABED00CA256C /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 9EAD8DBB2C78A1A300CA256C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -259,6 +428,9 @@
 			files = (
 				9EAD8DC02C78A1A300CA256C /* ContentView.swift in Sources */,
 				9EAD8DBE2C78A1A300CA256C /* swift_complete_appApp.swift in Sources */,
+				9EAD8E0A2C78B4DA00CA256C /* AppTabBarView.swift in Sources */,
+				9EAD8DF82C78A7D100CA256C /* SplashView.swift in Sources */,
+				9EAD8E0F2C78B8E000CA256C /* CardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -588,6 +760,58 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9EAD8DE72C78A49600CA256C /* XCRemoteSwiftPackageReference "WalletConnectSwiftV2" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/WalletConnect/WalletConnectSwiftV2";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.6.6;
+			};
+		};
+		9EAD8DF92C78ABED00CA256C /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.12.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9EAD8DE82C78A49600CA256C /* WalletConnect */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9EAD8DE72C78A49600CA256C /* XCRemoteSwiftPackageReference "WalletConnectSwiftV2" */;
+			productName = WalletConnect;
+		};
+		9EAD8DEA2C78A49600CA256C /* WalletConnectAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9EAD8DE72C78A49600CA256C /* XCRemoteSwiftPackageReference "WalletConnectSwiftV2" */;
+			productName = WalletConnectAuth;
+		};
+		9EAD8DEC2C78A49600CA256C /* WalletConnectChat */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9EAD8DE72C78A49600CA256C /* XCRemoteSwiftPackageReference "WalletConnectSwiftV2" */;
+			productName = WalletConnectChat;
+		};
+		9EAD8DEE2C78A49600CA256C /* WalletConnectEcho */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9EAD8DE72C78A49600CA256C /* XCRemoteSwiftPackageReference "WalletConnectSwiftV2" */;
+			productName = WalletConnectEcho;
+		};
+		9EAD8DF02C78A49600CA256C /* WalletConnectNetworking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9EAD8DE72C78A49600CA256C /* XCRemoteSwiftPackageReference "WalletConnectSwiftV2" */;
+			productName = WalletConnectNetworking;
+		};
+		9EAD8DFA2C78ABED00CA256C /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9EAD8DF92C78ABED00CA256C /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9EAD8DB22C78A1A300CA256C /* Project object */;
 }
