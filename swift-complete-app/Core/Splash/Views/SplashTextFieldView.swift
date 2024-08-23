@@ -9,6 +9,7 @@ import SwiftUI
 
 struct SplashTextFieldView: View {
     @Environment(\.colorScheme) var colorScheme
+    let pageIndex: Int
     let title: String
     let content: String
     var body: some View {
@@ -28,11 +29,14 @@ struct SplashTextFieldView: View {
                 )
         }
         .padding(
-            EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 0)
-        ).frame(height:UIScreen.main.bounds.height*0.2)
+            EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10)
+        ).frame(
+            width:UIScreen.main.bounds.width,
+            height:UIScreen.main.bounds.height*0.2
+                )
     }
 }
 
 #Preview {
-    SplashTextFieldView(title: "This is Amazing!",content: "It is an extraordinary journey that we have been through, le's keep it up and start rolling! Go go Go")
+    SplashTextFieldView(pageIndex: 0,title: "This is Amazing!",content: "It is an extraordinary journey that we have been through, le's keep it up and start rolling! Go go Go")
 }
