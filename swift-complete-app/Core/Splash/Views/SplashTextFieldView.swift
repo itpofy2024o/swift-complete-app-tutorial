@@ -42,7 +42,7 @@ struct SplashTextFieldView: View {
                         .cornerRadius(8)
                 }
                 .onTapGesture {
-                    self.isNavigating = true // Trigger navigation
+                    self.isNavigating = true
                 }
             } else {
                 Text("\(content)")
@@ -62,7 +62,7 @@ struct SplashTextFieldView: View {
             width:UIScreen.main.bounds.width,
             height:UIScreen.main.bounds.height*0.3
         ).alignmentGuide(.top) { d in d[.top] }
-        .animation(.easeInOut,value:true)
+        .animation(.smooth,value:isNavigating)
     }
 }
 
