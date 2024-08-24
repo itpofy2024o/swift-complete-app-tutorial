@@ -10,6 +10,7 @@
 		9E2303812C79B7680086F1D5 /* SplashLoggedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2303802C79B7680086F1D5 /* SplashLoggedView.swift */; };
 		9E2303922C7A25F80086F1D5 /* PlantDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2303912C7A25F80086F1D5 /* PlantDashboardView.swift */; };
 		9E2303942C7A26290086F1D5 /* AuthInputFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2303932C7A26290086F1D5 /* AuthInputFieldView.swift */; };
+		9E2303972C7A2E610086F1D5 /* ClerkSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 9E2303962C7A2E610086F1D5 /* ClerkSDK */; };
 		9EA246472C78DB0A002F9D4F /* SplashBaseImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA246462C78DB0A002F9D4F /* SplashBaseImageView.swift */; };
 		9EA246492C78DD4E002F9D4F /* SplashTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA246482C78DD4E002F9D4F /* SplashTextFieldView.swift */; };
 		9EA2464F2C7904DB002F9D4F /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA2464E2C7904DB002F9D4F /* AuthView.swift */; };
@@ -73,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E2303972C7A2E610086F1D5 /* ClerkSDK in Frameworks */,
 				9EAD8DFB2C78ABED00CA256C /* Kingfisher in Frameworks */,
 				9EAD8DEB2C78A49600CA256C /* WalletConnectAuth in Frameworks */,
 				9EAD8DE92C78A49600CA256C /* WalletConnect in Frameworks */,
@@ -266,6 +268,7 @@
 				9EAD8DEE2C78A49600CA256C /* WalletConnectEcho */,
 				9EAD8DF02C78A49600CA256C /* WalletConnectNetworking */,
 				9EAD8DFA2C78ABED00CA256C /* Kingfisher */,
+				9E2303962C7A2E610086F1D5 /* ClerkSDK */,
 			);
 			productName = "swift-complete-app";
 			productReference = 9EAD8DBA2C78A1A300CA256C /* swift-complete-app.app */;
@@ -342,6 +345,7 @@
 			packageReferences = (
 				9EAD8DE72C78A49600CA256C /* XCRemoteSwiftPackageReference "WalletConnectSwiftV2" */,
 				9EAD8DF92C78ABED00CA256C /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				9E2303952C7A2E610086F1D5 /* XCRemoteSwiftPackageReference "clerk-ios" */,
 			);
 			productRefGroup = 9EAD8DBB2C78A1A300CA256C /* Products */;
 			projectDirPath = "";
@@ -726,6 +730,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		9E2303952C7A2E610086F1D5 /* XCRemoteSwiftPackageReference "clerk-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/clerk/clerk-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.36.2;
+			};
+		};
 		9EAD8DE72C78A49600CA256C /* XCRemoteSwiftPackageReference "WalletConnectSwiftV2" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/WalletConnect/WalletConnectSwiftV2";
@@ -745,6 +757,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		9E2303962C7A2E610086F1D5 /* ClerkSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9E2303952C7A2E610086F1D5 /* XCRemoteSwiftPackageReference "clerk-ios" */;
+			productName = ClerkSDK;
+		};
 		9EAD8DE82C78A49600CA256C /* WalletConnect */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 9EAD8DE72C78A49600CA256C /* XCRemoteSwiftPackageReference "WalletConnectSwiftV2" */;

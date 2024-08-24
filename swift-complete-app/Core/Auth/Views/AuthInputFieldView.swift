@@ -13,17 +13,16 @@ struct AuthInputFieldView: View {
     let placeholder: String
     var isSecureInfo = false
     var body: some View {
-        VStack(alignment: .leading) {
+        VStack(alignment: .leading,spacing: 12) {
             Text(label)
-                .foregroundColor(Color(.darkText))
                 .fontWeight(.heavy)
-                .font(.footnote)
+                .font(.title3)
             if isSecureInfo {
                 SecureField(placeholder,text:$text)
-                    .font(.system(size:15))
+                    .font(.system(size:17))
             } else {
                 TextField(placeholder,text:$text)
-                    .font(.system(size: 15))
+                    .font(.system(size: 17))
             }
             Divider()
         }
@@ -31,5 +30,5 @@ struct AuthInputFieldView: View {
 }
 
 #Preview {
-    AuthInputFieldView(text: .constant(""), label: "Gentle", placeholder: "Mov")
+    AuthInputFieldView(text: .constant(""), label: "Gentle men", placeholder: "Mov")
 }
