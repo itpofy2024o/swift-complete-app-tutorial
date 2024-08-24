@@ -64,7 +64,7 @@ struct PageControl: View {
                     .frame(width: 8, height: 8)
             }
         }
-        .padding(.top, UIScreen.main.bounds.height*0.1)
+        .padding(.top, UIScreen.main.bounds.height*0.08)
     }
 }
 
