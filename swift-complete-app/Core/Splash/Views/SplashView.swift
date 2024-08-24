@@ -60,7 +60,7 @@ struct PageControl: View {
         HStack(spacing: 8) {
             ForEach(0..<numberOfPages, id:\.self) { index in
                 Circle()
-                    .fill(self.currentPage == index ? Color.black : Color.gray)
+                    .fill(self.currentPage == index ? Color.orange : Color.purple)
                     .frame(width: 8, height: 8)
             }
         }

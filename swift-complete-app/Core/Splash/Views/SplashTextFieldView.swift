@@ -21,7 +21,7 @@ struct SplashTextFieldView: View {
                 .foregroundColor(.black)
             if pageIndex == 2 {
                 NavigationLink {
-                    AuthView().navigationBarBackButtonHidden(true)
+                    AuthView(method: "firebase").navigationBarBackButtonHidden(true)
                 } label: {
                     Text("Sign In Now")
                         .font(.title)

@@ -11,6 +11,7 @@ import Kingfisher
 struct AuthView: View {
     @State private var email = ""
     @State private var passwd = ""
+    let method: String
     
     var body: some View {
         NavigationStack {
@@ -47,7 +48,7 @@ struct AuthView: View {
                 Spacer()
                 
                 NavigationLink {
-                    NewAccView()
+                    NewAccView().navigationBarBackButtonHidden(true)
                 } label : {
                     HStack {
                         Text("haven't join us yet?").font(.system(size: 15)).fontWeight(.light)
@@ -60,5 +61,5 @@ struct AuthView: View {
 }
 
 #Preview {
-    AuthView()
+    AuthView(method: "firebase")
 }

@@ -30,5 +30,5 @@ struct AuthInputFieldView: View {
 }
 
 #Preview {
-    AuthInputFieldView(text: .constant(""), label: "Gentle men", placeholder: "Mov")
+    AuthInputFieldView(text: .constant(""), label: "Gentle", placeholder: "Mov")
 }
