@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E2303812C79B7680086F1D5 /* SplashLoggedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2303802C79B7680086F1D5 /* SplashLoggedView.swift */; };
 		9EA246472C78DB0A002F9D4F /* SplashBaseImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA246462C78DB0A002F9D4F /* SplashBaseImageView.swift */; };
 		9EA246492C78DD4E002F9D4F /* SplashTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA246482C78DD4E002F9D4F /* SplashTextFieldView.swift */; };
 		9EA2464F2C7904DB002F9D4F /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA2464E2C7904DB002F9D4F /* AuthView.swift */; };
@@ -45,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9E2303802C79B7680086F1D5 /* SplashLoggedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashLoggedView.swift; sourceTree = "<group>"; };
 		9EA246462C78DB0A002F9D4F /* SplashBaseImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashBaseImageView.swift; sourceTree = "<group>"; };
 		9EA246482C78DD4E002F9D4F /* SplashTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashTextFieldView.swift; sourceTree = "<group>"; };
 		9EA2464E2C7904DB002F9D4F /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
@@ -212,6 +214,7 @@
 				9EAD8DF72C78A7D100CA256C /* SplashView.swift */,
 				9EA246462C78DB0A002F9D4F /* SplashBaseImageView.swift */,
 				9EA246482C78DD4E002F9D4F /* SplashTextFieldView.swift */,
+				9E2303802C79B7680086F1D5 /* SplashLoggedView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -441,6 +444,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9EA2464F2C7904DB002F9D4F /* AuthView.swift in Sources */,
+				9E2303812C79B7680086F1D5 /* SplashLoggedView.swift in Sources */,
 				9EAD8DC02C78A1A300CA256C /* ContentView.swift in Sources */,
 				9EA246492C78DD4E002F9D4F /* SplashTextFieldView.swift in Sources */,
 				9EAD8DBE2C78A1A300CA256C /* swift_complete_appApp.swift in Sources */,
