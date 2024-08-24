@@ -14,6 +14,7 @@ struct NewAccView: View {
     @State private var lastName = ""
     @State private var password = ""
     @State private var confirmation = ""
+    @Environment(\.dismiss) var dismiss
     
     var body: some View {
         VStack {
@@ -50,6 +51,15 @@ struct NewAccView: View {
             .padding(.top,20)
             
             Spacer()
+            
+            Button {
+                dismiss()
+            } label : {
+                HStack(spacing: 3) {
+                    Text("Already in the game!").font(.system(size: 15)).fontWeight(.light)
+                    Text("Sign In").font(.system(size: 17)).fontWeight(.bold)
+                }
+            }
         }
     }
 }

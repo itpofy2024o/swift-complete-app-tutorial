@@ -47,6 +47,7 @@ struct AuthView: View {
                 Spacer()
                 
                 NavigationLink {
+                    NewAccView()
                 } label : {
                     HStack {
                         Text("haven't join us yet?").font(.system(size: 15)).fontWeight(.light)
