@@ -7,10 +7,14 @@
 
 import SwiftUI
 
+func doesImageExist(named imageName: String) -> Bool {
+    return UIImage(named: imageName) != nil
+}
+
 struct SplashBaseImageView: View {
     let image: String
     var body: some View {
-        if image.count > 0 {
+        if image.count > 0 && doesImageExist(named: image) == true {
             Image(image).resizable().scaledToFit()
         } else {
             Color(
