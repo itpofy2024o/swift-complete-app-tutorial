@@ -13,7 +13,7 @@ struct AppTabBarView: View {
             Text("A")
                 .tabItem{Image(systemName: "magnifyingglass")}
                 .tag(0)
-            Text("B")
+            PlantDashboardView()
                 .tabItem{Image(systemName: "water.waves")}
                 .tag(1)
             Text("C")

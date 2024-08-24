@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		9E2303812C79B7680086F1D5 /* SplashLoggedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2303802C79B7680086F1D5 /* SplashLoggedView.swift */; };
+		9E2303922C7A25F80086F1D5 /* PlantDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2303912C7A25F80086F1D5 /* PlantDashboardView.swift */; };
+		9E2303942C7A26290086F1D5 /* AuthInputFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2303932C7A26290086F1D5 /* AuthInputFieldView.swift */; };
 		9EA246472C78DB0A002F9D4F /* SplashBaseImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA246462C78DB0A002F9D4F /* SplashBaseImageView.swift */; };
 		9EA246492C78DD4E002F9D4F /* SplashTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA246482C78DD4E002F9D4F /* SplashTextFieldView.swift */; };
 		9EA2464F2C7904DB002F9D4F /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA2464E2C7904DB002F9D4F /* AuthView.swift */; };
@@ -47,6 +49,8 @@
 
 /* Begin PBXFileReference section */
 		9E2303802C79B7680086F1D5 /* SplashLoggedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashLoggedView.swift; sourceTree = "<group>"; };
+		9E2303912C7A25F80086F1D5 /* PlantDashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantDashboardView.swift; sourceTree = "<group>"; };
+		9E2303932C7A26290086F1D5 /* AuthInputFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthInputFieldView.swift; sourceTree = "<group>"; };
 		9EA246462C78DB0A002F9D4F /* SplashBaseImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashBaseImageView.swift; sourceTree = "<group>"; };
 		9EA246482C78DD4E002F9D4F /* SplashTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashTextFieldView.swift; sourceTree = "<group>"; };
 		9EA2464E2C7904DB002F9D4F /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
@@ -95,26 +99,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9E23038F2C7A25C90086F1D5 /* PlantInterface */ = {
+			isa = PBXGroup;
+			children = (
+				9E2303902C7A25E50086F1D5 /* Views */,
+			);
+			path = PlantInterface;
+			sourceTree = "<group>";
+		};
+		9E2303902C7A25E50086F1D5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9E2303912C7A25F80086F1D5 /* PlantDashboardView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		9EA2464A2C7904B5002F9D4F /* Auth */ = {
 			isa = PBXGroup;
 			children = (
 				9EA2464C2C7904C3002F9D4F /* Views */,
-				9EA2464B2C7904BB002F9D4F /* ViewModels */,
 			);
 			path = Auth;
-			sourceTree = "<group>";
-		};
-		9EA2464B2C7904BB002F9D4F /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		9EA2464C2C7904C3002F9D4F /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				9EA2464E2C7904DB002F9D4F /* AuthView.swift */,
+				9E2303932C7A26290086F1D5 /* AuthInputFieldView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -142,9 +155,6 @@
 		9EAD8DBC2C78A1A300CA256C /* swift-complete-app */ = {
 			isa = PBXGroup;
 			children = (
-				9EAD8DFE2C78B25200CA256C /* Utils */,
-				9EAD8DFD2C78B24400CA256C /* Extensions */,
-				9EAD8DFC2C78B23900CA256C /* Shared */,
 				9EAD8DF42C78A7B100CA256C /* Core */,
 				9EAD8DF22C78A79E00CA256C /* App */,
 				9EAD8DBF2C78A1A300CA256C /* ContentView.swift */,
@@ -190,11 +200,9 @@
 		9EAD8DF42C78A7B100CA256C /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				9E23038F2C7A25C90086F1D5 /* PlantInterface */,
 				9EA2464A2C7904B5002F9D4F /* Auth */,
-				9EAD8E072C78B34D00CA256C /* Search */,
-				9EAD8E032C78B31100CA256C /* Home */,
 				9EAD8E012C78B30500CA256C /* TabBar */,
-				9EAD8DFF2C78B2F700CA256C /* Profile */,
 				9EAD8DF52C78A7B800CA256C /* Splash */,
 			);
 			path = Core;
@@ -219,42 +227,6 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		9EAD8DFC2C78B23900CA256C /* Shared */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Shared;
-			sourceTree = "<group>";
-		};
-		9EAD8DFD2C78B24400CA256C /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
-		9EAD8DFE2C78B25200CA256C /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Utils;
-			sourceTree = "<group>";
-		};
-		9EAD8DFF2C78B2F700CA256C /* Profile */ = {
-			isa = PBXGroup;
-			children = (
-				9EAD8E002C78B30100CA256C /* Views */,
-			);
-			path = Profile;
-			sourceTree = "<group>";
-		};
-		9EAD8E002C78B30100CA256C /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		9EAD8E012C78B30500CA256C /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -267,36 +239,6 @@
 			isa = PBXGroup;
 			children = (
 				9EAD8E092C78B4D900CA256C /* AppTabBarView.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		9EAD8E032C78B31100CA256C /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				9EAD8E042C78B32E00CA256C /* Views */,
-			);
-			path = Home;
-			sourceTree = "<group>";
-		};
-		9EAD8E042C78B32E00CA256C /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		9EAD8E072C78B34D00CA256C /* Search */ = {
-			isa = PBXGroup;
-			children = (
-				9EAD8E082C78B35100CA256C /* Views */,
-			);
-			path = Search;
-			sourceTree = "<group>";
-		};
-		9EAD8E082C78B35100CA256C /* Views */ = {
-			isa = PBXGroup;
-			children = (
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -447,10 +389,12 @@
 				9E2303812C79B7680086F1D5 /* SplashLoggedView.swift in Sources */,
 				9EAD8DC02C78A1A300CA256C /* ContentView.swift in Sources */,
 				9EA246492C78DD4E002F9D4F /* SplashTextFieldView.swift in Sources */,
+				9E2303942C7A26290086F1D5 /* AuthInputFieldView.swift in Sources */,
 				9EAD8DBE2C78A1A300CA256C /* swift_complete_appApp.swift in Sources */,
 				9EA246472C78DB0A002F9D4F /* SplashBaseImageView.swift in Sources */,
 				9EAD8E0A2C78B4DA00CA256C /* AppTabBarView.swift in Sources */,
 				9EAD8DF82C78A7D100CA256C /* SplashView.swift in Sources */,
+				9E2303922C7A25F80086F1D5 /* PlantDashboardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
