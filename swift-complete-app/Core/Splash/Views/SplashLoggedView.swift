@@ -38,14 +38,13 @@ struct SplashLoggedView: View {
                                     blue:98.0/255.0
                                 )
                         )
-                    
-                    NavigationLink(destination: AppTabBarView().navigationBarBackButtonHidden(true), isActive: $navigateToViewHome) {
-                                        EmptyView()
-                                    }
                 }.onAppear {
                     DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                         self.navigateToViewHome = true
                     }
+                }.navigationDestination(isPresented: $navigateToViewHome) {
+                    AppTabBarView()
+                        .navigationBarBackButtonHidden(true)
                 }
             }
         }
