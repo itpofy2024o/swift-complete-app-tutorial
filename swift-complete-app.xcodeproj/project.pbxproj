@@ -12,6 +12,8 @@
 		9E2303942C7A26290086F1D5 /* AuthInputFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2303932C7A26290086F1D5 /* AuthInputFieldView.swift */; };
 		9E2303972C7A2E610086F1D5 /* ClerkSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 9E2303962C7A2E610086F1D5 /* ClerkSDK */; };
 		9E2303992C7A2ED10086F1D5 /* NewAccView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2303982C7A2ED10086F1D5 /* NewAccView.swift */; };
+		9E23039D2C7A50460086F1D5 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E23039C2C7A50460086F1D5 /* ProfileView.swift */; };
+		9E23039F2C7A52600086F1D5 /* UserInfoCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E23039E2C7A525F0086F1D5 /* UserInfoCardView.swift */; };
 		9EA246472C78DB0A002F9D4F /* SplashBaseImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA246462C78DB0A002F9D4F /* SplashBaseImageView.swift */; };
 		9EA246492C78DD4E002F9D4F /* SplashTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA246482C78DD4E002F9D4F /* SplashTextFieldView.swift */; };
 		9EA2464F2C7904DB002F9D4F /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA2464E2C7904DB002F9D4F /* AuthView.swift */; };
@@ -54,6 +56,8 @@
 		9E2303912C7A25F80086F1D5 /* PlantDashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantDashboardView.swift; sourceTree = "<group>"; };
 		9E2303932C7A26290086F1D5 /* AuthInputFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthInputFieldView.swift; sourceTree = "<group>"; };
 		9E2303982C7A2ED10086F1D5 /* NewAccView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAccView.swift; sourceTree = "<group>"; };
+		9E23039C2C7A50460086F1D5 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		9E23039E2C7A525F0086F1D5 /* UserInfoCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoCardView.swift; sourceTree = "<group>"; };
 		9EA246462C78DB0A002F9D4F /* SplashBaseImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashBaseImageView.swift; sourceTree = "<group>"; };
 		9EA246482C78DD4E002F9D4F /* SplashTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashTextFieldView.swift; sourceTree = "<group>"; };
 		9EA2464E2C7904DB002F9D4F /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
@@ -115,6 +119,23 @@
 			isa = PBXGroup;
 			children = (
 				9E2303912C7A25F80086F1D5 /* PlantDashboardView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9E23039A2C7A50260086F1D5 /* ProfileInterface */ = {
+			isa = PBXGroup;
+			children = (
+				9E23039B2C7A50360086F1D5 /* Views */,
+			);
+			path = ProfileInterface;
+			sourceTree = "<group>";
+		};
+		9E23039B2C7A50360086F1D5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9E23039C2C7A50460086F1D5 /* ProfileView.swift */,
+				9E23039E2C7A525F0086F1D5 /* UserInfoCardView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -205,6 +226,7 @@
 		9EAD8DF42C78A7B100CA256C /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				9E23039A2C7A50260086F1D5 /* ProfileInterface */,
 				9E23038F2C7A25C90086F1D5 /* PlantInterface */,
 				9EA2464A2C7904B5002F9D4F /* Auth */,
 				9EAD8E012C78B30500CA256C /* TabBar */,
@@ -394,8 +416,10 @@
 			files = (
 				9EA2464F2C7904DB002F9D4F /* AuthView.swift in Sources */,
 				9E2303812C79B7680086F1D5 /* SplashLoggedView.swift in Sources */,
+				9E23039F2C7A52600086F1D5 /* UserInfoCardView.swift in Sources */,
 				9EAD8DC02C78A1A300CA256C /* ContentView.swift in Sources */,
 				9EA246492C78DD4E002F9D4F /* SplashTextFieldView.swift in Sources */,
+				9E23039D2C7A50460086F1D5 /* ProfileView.swift in Sources */,
 				9E2303992C7A2ED10086F1D5 /* NewAccView.swift in Sources */,
 				9E2303942C7A26290086F1D5 /* AuthInputFieldView.swift in Sources */,
 				9EAD8DBE2C78A1A300CA256C /* swift_complete_appApp.swift in Sources */,

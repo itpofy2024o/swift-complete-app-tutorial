@@ -10,6 +10,7 @@ import Kingfisher
 
 struct NewAccView: View {
     @State private var newEmail = ""
+    @State private var username = ""
     @State private var firstName = ""
     @State private var lastName = ""
     @State private var password = ""
@@ -21,12 +22,13 @@ struct NewAccView: View {
             KFImage(URL(string:"https://moralis.io/wp-content/uploads/2023/11/Phantom-Wallet.png"))
                 .resizable()
                 .scaledToFit()
-                .frame(width:UIScreen.main.bounds.width*0.4)
-                .cornerRadius(25)
+                .cornerRadius(20)
                 .padding(.vertical,26)
             
             VStack(spacing: 15) {
-                AuthInputFieldView(text:$newEmail,label: "Gmail Address",placeholder: "example@gmail.com")
+                AuthInputFieldView(text:$username,label: "Username",placeholder: "elonthemuskpredicted")
+                    .autocapitalization(/*@START_MENU_TOKEN@*/.none/*@END_MENU_TOKEN@*/)
+                AuthInputFieldView(text:$newEmail,label: "Email Address",placeholder: "example@gmail.com")
                     .autocapitalization(/*@START_MENU_TOKEN@*/.none/*@END_MENU_TOKEN@*/)
                 AuthInputFieldView(text:$firstName,label: "First Name",placeholder: "Alexander")
                 AuthInputFieldView(text:$lastName,label: "Last Name",placeholder: "Bularia")

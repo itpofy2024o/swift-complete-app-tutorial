@@ -16,7 +16,7 @@ struct AppTabBarView: View {
             PlantDashboardView()
                 .tabItem{Image(systemName: "water.waves")}
                 .tag(1)
-            Text("C")
+            ProfileView()
                 .tabItem{Image(systemName: "person")}
                 .tag(2)
         }

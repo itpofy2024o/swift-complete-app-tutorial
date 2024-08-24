@@ -24,7 +24,7 @@ struct AuthView: View {
                     .padding(.vertical,26)
                 
                 VStack(spacing: 26) {
-                    AuthInputFieldView(text:$email,label: "Gmail Address",placeholder: "example@gmail.com")
+                    AuthInputFieldView(text:$email,label: "Email Address",placeholder: "example@gmail.com")
                         .autocapitalization(/*@START_MENU_TOKEN@*/.none/*@END_MENU_TOKEN@*/)
                     AuthInputFieldView(text:$passwd,label: "Password",placeholder: "thisispassword_youknowit",isSecureInfo: true)
                 }
