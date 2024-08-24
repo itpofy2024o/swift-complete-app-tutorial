@@ -8,7 +8,7 @@
 import SwiftUI
 
 func doesImageExist(named imageName: String) -> Bool {
-    return UIImage(named: imageName) != nil
+    return UIImage(named: imageName) != nil // useful util
 }
 
 struct SplashBaseImageView: View {
@@ -27,5 +27,5 @@ struct SplashBaseImageView: View {
 }
 
 #Preview {
-    SplashBaseImageView(image:"infographic")
+    SplashBaseImageView(image:"infographi")
 }

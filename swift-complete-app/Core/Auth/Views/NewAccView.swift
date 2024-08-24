@@ -23,7 +23,7 @@ struct NewAccView: View {
                 .scaledToFit()
                 .frame(width:UIScreen.main.bounds.width*0.4)
                 .cornerRadius(25)
-                .padding(.vertical,16)
+                .padding(.vertical,26)
             
             VStack(spacing: 15) {
                 AuthInputFieldView(text:$newEmail,label: "Gmail Address",placeholder: "example@gmail.com")

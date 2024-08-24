@@ -25,7 +25,7 @@ struct IntroView: View {
 struct AboutView: View {
     var body: some View {
         ZStack {
-            SplashBaseImageView(image:"a")
+            SplashBaseImageView(image:"")
             VStack {
                 Spacer()
                 SplashTextFieldView(pageIndex: 1,
@@ -40,11 +40,11 @@ struct AboutView: View {
 struct AuthPromptView: View {
     var body: some View {
         ZStack {
-            SplashBaseImageView(image:"b")
+            SplashBaseImageView(image:"")
             VStack {
                 Spacer()
                 SplashTextFieldView(pageIndex: 2,
-                    title:"This is Amazing!",
+                    title:"This isn't Amazing?",
                     content:""
                 ).background(.white)
             }
@@ -71,14 +71,14 @@ struct PageControl: View {
 struct SplashView: View {
     @State private var currentPage: Int = 0
     @GestureState private var dragOffset = CGSize.zero
-    
-    private let pageCount = 3
 
     let pages: [AnyView] = [
         AnyView(IntroView()),
         AnyView(AboutView()),
         AnyView(AuthPromptView())
     ]
+    
+    private let pageCount = 3
     
     var body: some View {
         NavigationStack {
@@ -93,7 +93,7 @@ struct SplashView: View {
                     .animation(.easeInOut, value: self.currentPage)
                     
                     PageControl(numberOfPages: pageCount, currentPage: self.$currentPage)
-                        .position(x: geometry.size.width / 2, y: geometry.size.height - 30)
+                        .position(x: geometry.size.width / 2, y: geometry.size.height - 35)
                 }
                 .gesture(
                     DragGesture()
@@ -109,24 +109,6 @@ struct SplashView: View {
                             }
                         }
                 )
-            }
-        }
-    }
-}
-
-struct PageIndicator: View {
-    let numberOfPages: Int
-    let currentPage: Int
-    
-    private let activeColor = Color.green.opacity(0.5)
-    private let inactiveColor = Color.gray.opacity(0.7)
-    
-    var body: some View {
-        HStack {
-            ForEach(0..<numberOfPages, id: \.self) { index in
-                Circle()
-                    .fill(index == currentPage ? activeColor : inactiveColor)
-                    .frame(width: 8, height: 8)
             }
         }
     }

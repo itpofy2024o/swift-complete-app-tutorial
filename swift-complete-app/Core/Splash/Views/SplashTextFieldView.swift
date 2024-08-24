@@ -67,5 +67,5 @@ struct SplashTextFieldView: View {
 }
 
 #Preview {
-    SplashTextFieldView(pageIndex: 2,title: "This is Amazing!",content: "It is an extraordinary journey that we have been through, le's keep it up and start rolling! Go go Go")
+    SplashTextFieldView(pageIndex: 1,title: "This is Amazing!",content: "It is an extraordinary journey that we have been through, le's keep it up and start rolling! Go go Go")
 }
