@@ -45,6 +45,14 @@ struct AuthView: View {
                 .padding(.top,20)
                 
                 Spacer()
+                
+                NavigationLink {
+                } label : {
+                    HStack {
+                        Text("haven't join us yet?").font(.system(size: 15)).fontWeight(.light)
+                        Text("Well come right in!").fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/).font(.system(size: 17))
+                    }
+                }
             }
         }
     }
