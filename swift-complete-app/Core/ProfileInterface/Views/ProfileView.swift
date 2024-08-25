@@ -16,7 +16,7 @@ struct ProfileView: View {
                 Text("")
             }
             
-            Section("FootPrint") {
+            Section("Account") {
                 Button {
                     print("")
                 } label : {
