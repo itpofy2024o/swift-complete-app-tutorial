@@ -10,8 +10,10 @@ import SwiftUI
 struct ProfileView: View {
     let userName: String
     var body: some View {
+        let firstWordSubSequence: String.SubSequence? = UserFirebase.Mock_User_Firebase.email.split(separator: "@").first
+        let email = firstWordSubSequence.map(String.init) ?? ""
         List {
-            UserInfoCardView(username: UserFirebase.Mock_User_Firebase.fullname, email: "aussiebear1996").listRowBackground(Color.clear)
+            UserInfoCardView(username: UserFirebase.Mock_User_Firebase.fullname, email:email).listRowBackground(Color.clear)
             
             Section("FootPrint") {
                 Text("")
