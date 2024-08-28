@@ -11,6 +11,8 @@ import Kingfisher
 struct AuthView: View {
     @State private var email = ""
     @State private var passwd = ""
+    @StateObject var authModel = AuthViewModel()
+    
     let method: String
     
     var body: some View {
@@ -32,7 +34,9 @@ struct AuthView: View {
                 .padding(.top,UIScreen.main.bounds.width*0.05)
                 
                 Button {
-                    print("hey")
+                    Task {
+                        try await authModel.signIn(withEmail: email, password: passwd)
+                    }
                 } label: {
                     HStack {
                         Text("SIGN IN").fontWeight(.semibold)
