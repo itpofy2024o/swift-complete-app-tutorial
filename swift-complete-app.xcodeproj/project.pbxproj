@@ -33,6 +33,7 @@
 		9E11DB4A2C7F407E00B7E723 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 9E11DB492C7F407E00B7E723 /* FirebaseStorageCombine-Community */; };
 		9E11DB4C2C7F407E00B7E723 /* FirebaseVertexAI-Preview in Frameworks */ = {isa = PBXBuildFile; productRef = 9E11DB4B2C7F407E00B7E723 /* FirebaseVertexAI-Preview */; };
 		9E11DB4E2C7F434300B7E723 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9E11DB4D2C7F434300B7E723 /* GoogleService-Info.plist */; };
+		9E11DB512C7F47DD00B7E723 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E11DB502C7F47DD00B7E723 /* AuthViewModel.swift */; };
 		9E2303812C79B7680086F1D5 /* SplashLoggedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2303802C79B7680086F1D5 /* SplashLoggedView.swift */; };
 		9E2303922C7A25F80086F1D5 /* PlantDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2303912C7A25F80086F1D5 /* PlantDashboardView.swift */; };
 		9E2303942C7A26290086F1D5 /* AuthInputFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2303932C7A26290086F1D5 /* AuthInputFieldView.swift */; };
@@ -81,6 +82,7 @@
 		9E11DB172C7F0AEF00B7E723 /* PreferenceRowCompView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceRowCompView.swift; sourceTree = "<group>"; };
 		9E11DB1C2C7F12C400B7E723 /* UserFirebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFirebase.swift; sourceTree = "<group>"; };
 		9E11DB4D2C7F434300B7E723 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		9E11DB502C7F47DD00B7E723 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		9E2303802C79B7680086F1D5 /* SplashLoggedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashLoggedView.swift; sourceTree = "<group>"; };
 		9E2303912C7A25F80086F1D5 /* PlantDashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantDashboardView.swift; sourceTree = "<group>"; };
 		9E2303932C7A26290086F1D5 /* AuthInputFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthInputFieldView.swift; sourceTree = "<group>"; };
@@ -167,6 +169,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		9E11DB4F2C7F47C600B7E723 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				9E11DB502C7F47DD00B7E723 /* AuthViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		9E23038F2C7A25C90086F1D5 /* PlantInterface */ = {
 			isa = PBXGroup;
 			children = (
@@ -204,6 +214,7 @@
 		9EA2464A2C7904B5002F9D4F /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				9E11DB4F2C7F47C600B7E723 /* ViewModels */,
 				9EA2464C2C7904C3002F9D4F /* Views */,
 			);
 			path = Auth;
@@ -514,6 +525,7 @@
 				9E2303942C7A26290086F1D5 /* AuthInputFieldView.swift in Sources */,
 				9EAD8DBE2C78A1A300CA256C /* swift_complete_appApp.swift in Sources */,
 				9EA246472C78DB0A002F9D4F /* SplashBaseImageView.swift in Sources */,
+				9E11DB512C7F47DD00B7E723 /* AuthViewModel.swift in Sources */,
 				9EAD8E0A2C78B4DA00CA256C /* AppTabBarView.swift in Sources */,
 				9EAD8DF82C78A7D100CA256C /* SplashView.swift in Sources */,
 				9E2303922C7A25F80086F1D5 /* PlantDashboardView.swift in Sources */,
