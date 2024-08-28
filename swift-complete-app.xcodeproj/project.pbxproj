@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E11DB182C7F0AF000B7E723 /* PreferenceRowCompView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E11DB172C7F0AEF00B7E723 /* PreferenceRowCompView.swift */; };
+		9E11DB1D2C7F12C400B7E723 /* UserFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E11DB1C2C7F12C400B7E723 /* UserFirebase.swift */; };
 		9E2303812C79B7680086F1D5 /* SplashLoggedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2303802C79B7680086F1D5 /* SplashLoggedView.swift */; };
 		9E2303922C7A25F80086F1D5 /* PlantDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2303912C7A25F80086F1D5 /* PlantDashboardView.swift */; };
 		9E2303942C7A26290086F1D5 /* AuthInputFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2303932C7A26290086F1D5 /* AuthInputFieldView.swift */; };
@@ -52,6 +54,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9E11DB172C7F0AEF00B7E723 /* PreferenceRowCompView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceRowCompView.swift; sourceTree = "<group>"; };
+		9E11DB1C2C7F12C400B7E723 /* UserFirebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFirebase.swift; sourceTree = "<group>"; };
 		9E2303802C79B7680086F1D5 /* SplashLoggedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashLoggedView.swift; sourceTree = "<group>"; };
 		9E2303912C7A25F80086F1D5 /* PlantDashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantDashboardView.swift; sourceTree = "<group>"; };
 		9E2303932C7A26290086F1D5 /* AuthInputFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthInputFieldView.swift; sourceTree = "<group>"; };
@@ -107,6 +111,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9E11DB192C7F106F00B7E723 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9E11DB1C2C7F12C400B7E723 /* UserFirebase.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		9E23038F2C7A25C90086F1D5 /* PlantInterface */ = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +148,7 @@
 			children = (
 				9E23039C2C7A50460086F1D5 /* ProfileView.swift */,
 				9E23039E2C7A525F0086F1D5 /* UserInfoCardView.swift */,
+				9E11DB172C7F0AEF00B7E723 /* PreferenceRowCompView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -181,6 +194,7 @@
 		9EAD8DBC2C78A1A300CA256C /* swift-complete-app */ = {
 			isa = PBXGroup;
 			children = (
+				9E11DB192C7F106F00B7E723 /* Model */,
 				9EAD8DF42C78A7B100CA256C /* Core */,
 				9EAD8DF22C78A79E00CA256C /* App */,
 				9EAD8DBF2C78A1A300CA256C /* ContentView.swift */,
@@ -415,6 +429,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9EA2464F2C7904DB002F9D4F /* AuthView.swift in Sources */,
+				9E11DB182C7F0AF000B7E723 /* PreferenceRowCompView.swift in Sources */,
+				9E11DB1D2C7F12C400B7E723 /* UserFirebase.swift in Sources */,
 				9E2303812C79B7680086F1D5 /* SplashLoggedView.swift in Sources */,
 				9E23039F2C7A52600086F1D5 /* UserInfoCardView.swift in Sources */,
 				9EAD8DC02C78A1A300CA256C /* ContentView.swift in Sources */,

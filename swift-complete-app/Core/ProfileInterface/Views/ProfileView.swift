@@ -11,10 +11,16 @@ struct ProfileView: View {
     let userName: String
     var body: some View {
         List {
-            UserInfoCardView(username: "Step16writing", email: "aussiebear1996").listRowBackground(Color.clear)
+            UserInfoCardView(username: UserFirebase.Mock_User_Firebase.fullname, email: "aussiebear1996").listRowBackground(Color.clear)
             
             Section("FootPrint") {
                 Text("")
+            }
+            
+            Section("Preferences") {
+                PreferenceRowCompView(
+                    iconName: "gear", header: "settings", tint: Color(.systemGray)
+                )
             }
             
             Section("Account") {
