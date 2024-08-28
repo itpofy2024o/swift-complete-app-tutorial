@@ -21,6 +21,10 @@ struct UserInfoCardView: View {
                 .cornerRadius(30)
                 .padding(.trailing,UIScreen.main.bounds.width*0.05)
             
+            if UIDevice.current.userInterfaceIdiom == .pad {
+                Spacer()
+            }
+            
             VStack(alignment: .leading) {
                 Text(username)
                     .font(.title3)

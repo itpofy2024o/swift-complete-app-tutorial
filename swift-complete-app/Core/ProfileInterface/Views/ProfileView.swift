@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct ProfileView: View {
+    let userName: String
     var body: some View {
         List {
-            UserInfoCardView(username: "Step16writing", email: "aussiebear1996@gmail.com").listRowBackground(Color.clear)
+            UserInfoCardView(username: "Step16writing", email: "aussiebear1996").listRowBackground(Color.clear)
             
             Section("FootPrint") {
                 Text("")
@@ -18,13 +19,13 @@ struct ProfileView: View {
             
             Section("Account") {
                 Button {
-                    print("")
+                    print("user - \(userName) logged out")
                 } label : {
                     Text("Log Out").foregroundColor(.gray)
                 }
                 
                 Button {
-                    print("")
+                    print("user - \(userName) deleted account")
                 } label : {
                     Text("Delete Account").foregroundColor(.red)
                 }
@@ -34,5 +35,5 @@ struct ProfileView: View {
 }
 
 #Preview {
-    ProfileView()
+    ProfileView(userName: "FannyWilde144")
 }
