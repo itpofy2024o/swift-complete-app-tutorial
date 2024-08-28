@@ -11,8 +11,6 @@ import Kingfisher
 struct AuthView: View {
     @State private var email = ""
     @State private var passwd = ""
-    @StateObject var authModel = AuthViewModel()
-    
     let method: String
     
     var body: some View {
@@ -35,7 +33,7 @@ struct AuthView: View {
                 
                 Button {
                     Task {
-                        try await authModel.signIn(withEmail: email, password: passwd)
+//                        try await authFirebaseModel.signIn(withEmail: email, password: passwd)
                     }
                 } label: {
                     HStack {

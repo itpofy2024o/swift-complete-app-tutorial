@@ -8,7 +8,7 @@
 import Foundation
 import FirebaseAuth
 
-class AuthViewModel: ObservableObject {
+class AuthFirebaseViewModel: ObservableObject {
     @Published var userSession: FirebaseAuth.User?
     @Published var currentUser: UserFirebase?
     
