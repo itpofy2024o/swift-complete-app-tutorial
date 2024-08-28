@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct swift_complete_appApp: App {
-    @StateObject var firebaseAuthModel = AuthViewModel()
+    @StateObject var firebaseAuthModel = AuthFirebaseViewModel()
     var body: some Scene {
         WindowGroup {
             ContentView()
