@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import FirebaseAuth
+import Firebase
 
 class AuthViewModel: ObservableObject {
     @Published var userSession: FirebaseAuth.User?
