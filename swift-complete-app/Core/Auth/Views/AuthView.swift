@@ -32,7 +32,9 @@ struct AuthView: View {
                 .padding(.top,UIScreen.main.bounds.width*0.05)
                 
                 Button {
-                    print("hey")
+                    Task {
+//                        try await authFirebaseModel.signIn(withEmail: email, password: passwd)
+                    }
                 } label: {
                     HStack {
                         Text("SIGN IN").fontWeight(.semibold)

@@ -257,7 +257,6 @@
 				9E11DB192C7F106F00B7E723 /* Model */,
 				9EAD8DF42C78A7B100CA256C /* Core */,
 				9EAD8DF22C78A79E00CA256C /* App */,
-				9EAD8DBF2C78A1A300CA256C /* ContentView.swift */,
 				9EAD8DC12C78A1A800CA256C /* Assets.xcassets */,
 				9EAD8DC32C78A1A800CA256C /* Preview Content */,
 			);
@@ -300,6 +299,7 @@
 		9EAD8DF42C78A7B100CA256C /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				9ED4ED1E2C7F4F500004C5CC /* Root */,
 				9E23039A2C7A50260086F1D5 /* ProfileInterface */,
 				9E23038F2C7A25C90086F1D5 /* PlantInterface */,
 				9EA2464A2C7904B5002F9D4F /* Auth */,
@@ -342,6 +342,14 @@
 				9EAD8E092C78B4D900CA256C /* AppTabBarView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		9ED4ED1E2C7F4F500004C5CC /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				9EAD8DBF2C78A1A300CA256C /* ContentView.swift */,
+			);
+			path = Root;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
